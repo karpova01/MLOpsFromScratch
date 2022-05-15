@@ -43,4 +43,4 @@ Your team will have individuals of varying skill sets, so it is imperative to de
 -  Challenge 2: **[Create a Build pipeline in Azure DevOps](./Challenge-02.md)**
 -  Challenge 3: **[Create a Unit Test in Azure DevOps](./Challenge-03.md)**
 -  Challenge 4: **[Create a Release pipeline in Azure DevOps](./Challenge-04.md)**
--  Challenge 5: **[Retraining and Model Evaluation](./Challenge-05.md)**
+-  Additional challenge: **[Retraining and Model Evaluation](./Additional-challenge.md)**
