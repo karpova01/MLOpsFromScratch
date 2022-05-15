@@ -11,8 +11,8 @@ Time series is a series of data points collected or indexed in time order at reg
 ## Description
 
 - Create and setup a new project in Azure DevOps.
-  - Import project files from the `Data_and_Code.zip` file your instructor provides.
   - [Create new service connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml) in Project Settings for your Azure ML service and Azure Subscription using Azure Resource Manager service principal. This will enable you to connect to external and remote services to execute tasks in a pipeline.
+- Import project files from the `DemandForecasting.zip` file your instructor provides.
 - Clone into VS Code and run the projects files locally to understand the forecasting project and explore the different files available.    
   **NOTE:** This is the data science part. The focus of this hack is **not** on data science, but more on MLOps to help you understand how you can apply DevOps practices and principles to accelerate your ML projects and increase the efficiency, quality, and consistency of your ML workflows.
 - Install library requirements to setup your environment (`environment_setup/requirements.txt`).
@@ -26,7 +26,6 @@ Time series is a series of data points collected or indexed in time order at reg
 - Understand the contents of the python files under `service/code/`.
 - Count the number of CSV files extracted into `Data/` folder LOCALLY using a Python script in VS Code or any popular IDE.
 - Creating an ARIMA model locally using VS Code.
-- Forecasting project imported into Azure DevOps.
 
 ## Learning resources
 
