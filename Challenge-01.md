@@ -15,7 +15,7 @@ Time series is a series of data points collected or indexed in time order at reg
 - Import project files from the `DemandForecasting.zip` file your instructor provides.
 - Clone into VS Code and run the projects files locally to understand the forecasting project and explore the different files available.    
   **NOTE:** This is the data science part. The focus of this hack is **not** on data science, but more on MLOps to help you understand how you can apply DevOps practices and principles to accelerate your ML projects and increase the efficiency, quality, and consistency of your ML workflows.
-- Install library requirements to setup your environment (`environment_setup/requirements.txt`).
+- Install library requirements to setup your environment `environment_setup/requirements.txt`.
 - Configure your Azure ML Workspace for the project.
   - **HINT:** Add workspace details in `config.json`. You can download it from portal too.
   - **NOTE:** Alternatively, you can configure your Azure ML Workspace by using Azure DevOps pipeline variables.
