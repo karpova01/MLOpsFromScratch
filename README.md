@@ -38,9 +38,9 @@ Your team will have individuals of varying skill sets, so it is imperative to de
 
 ## Challenges
 
--  Challenge 0: **[Prerequisities](Student/Challenge-00.md)**
--  Challenge 1: **[Run model locally & and import repo into Azure DevOps](Student/Challenge-01.md)**
--  Challenge 2: **[Create a Build pipeline in Azure DevOps](Student/Challenge-02.md)**
--  Challenge 3: **[Create a Unit Test in Azure DevOps](Student/Challenge-03.md)**
--  Challenge 4: **[Create a Release pipeline in Azure DevOps](Student/Challenge-04.md)**
--  Challenge 5: **[Retraining and Model Evaluation](Student/Challenge-05.md)**
+-  Challenge 0: **[Prerequisities](./Challenge-00.md)**
+-  Challenge 1: **[Run model locally & and import repo into Azure DevOps](./Challenge-01.md)**
+-  Challenge 2: **[Create a Build pipeline in Azure DevOps](./Challenge-02.md)**
+-  Challenge 3: **[Create a Unit Test in Azure DevOps](./Challenge-03.md)**
+-  Challenge 4: **[Create a Release pipeline in Azure DevOps](./Challenge-04.md)**
+-  Challenge 5: **[Retraining and Model Evaluation](./Challenge-05.md)**
