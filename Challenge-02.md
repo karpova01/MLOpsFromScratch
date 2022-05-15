@@ -16,8 +16,9 @@ We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The
 
 ## Description
 
-- Make sure you have setup a new project, created service connections, and configured Azure ML Workspace for the project.
+- Make sure you have setup a new project,imported the code, created service connections, and configured Azure ML Workspace for the project.
 - Create a `Build` pipeline.
+  **TIP:**use the classic editor.
   - Select the repo that was imported in the previous challenge.
   - Set Agent Pool to `Azure Pipelines`.
   - Set Agent Specification to `ubuntu-18.04`.
