@@ -8,7 +8,7 @@ Use this challenge to perform tasks to confirm data has been extracted from sour
 
 ## Description
 
-- Use the code in the file `service/code/UnitTest.py` to validate that AdventureWorks data is indeed downloaded and extracted into `Data/` folder. Do a preview of file count in the data folder. Additionally, you could also pick a csv file visualize the data.
+- Use the code in the folder `service/code/UnitTest.py` to validate that AdventureWorks data is indeed downloaded and extracted into `Data/` folder. Do a preview of file count in the data folder. Additionally, you could also pick a csv file visualize the data.
 
 ## Success criteria
 
