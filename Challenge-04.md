@@ -18,7 +18,7 @@ We can setup Continuous Deployment (CID) trigger for every `Release` pipeline. T
 
 - Create a `Release` pipeline.
   - **TIP:** use the classic editor.
-- Add `Build Artifact` that you created in the previous challenge.
+- Add `Build Artifact` that you created in the previous challenge (your built pipeline).
   - Set Agent Pool to `Azure Pipelines`.
   - Set Agent Specification to `ubuntu-18.04`.
 - Add `Release` pipeline tasks:
