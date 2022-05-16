@@ -23,7 +23,7 @@ We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The
   - Set Agent Pool to `Azure Pipelines`.
   - Set Agent Specification to `ubuntu-18.04`.
 - Add `Build` pipeline tasks
-  - Add a task to install the required version of Python (3.6).
+  - Add a task to install the required version of Python `Python 3.6`.
   - Add a task to setup environment by using `requirements.txt` file in `environment_setup/` folder. This will install all the python modules required for the project.
   - Add a task to get Azure ML Workspace connection using `Workspace.py` in `service/code/` folder. This will establish connection to Azure ML workspace by using your workspace details in `configuration/config.json` file.         
   - Add a task to acquire time series transactions data using `AcquireData.py` in `service/code/` folder. This will download and extract the data required to train a forecasting model in the next steps.
@@ -44,6 +44,7 @@ We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The
 
 ## Tips
 
+- Use the `Azure CLI` task to run the Python scripts since they need to interact with the `Azure Machine Learning` resource.
 - Finding the path to where Azure DevOps will copy your build artifact is often the hardest part.
   - You can use the following command in a `Bash` task to print all environment variables (which is how predefined variables are passed to your pipeline).
     ```shell
@@ -54,8 +55,6 @@ We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The
     find $(Pipeline.Workspace) -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"
     ```
 - Use the [predefined variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=classic) in Azure DevOps to make your tasks simpler & more robust.
-- Make sure you specify the version of Python you want the tasks to use (`Python 3.6`, there is a task for this)
-- Use the `Azure CLI` task to run the Python scripts since they need to interact with the `Azure Machine Learning` resource.
 
 ## Learning resources
 
