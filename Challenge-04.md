@@ -23,7 +23,7 @@ We can setup Continuous Deployment (CID) trigger for every `Release` pipeline. T
   - Set Agent Specification to `ubuntu-18.04`.
 - Add `Release` pipeline tasks:
   - Add a task to install the required version of Python `Python 3.6`.
-  - Add a task to setup environment by using `requirements.txt` file in `environment_setup/` folder. This will install all the python modules required to deploy the forecasting model.
+  - Add a task to setup environment by using `install_environment.sh` file in `environment_setup/` folder. This will install all the python modules required to deploy the forecasting model.
   - Add a task to deploy the scoring image on ACI using `deployOnAci`.py in `service/code/` folder. A “healthy” ACI deployment will be created under Azure ML Endpoints. It contains a REST-based Scoring URI/Endpoint that you can call using Postman or Swagger. 
     - **NOTE:** ACI is recommended to use testing or pre-production stages. Since bigger inferencing compute is needed in production for low latency and high throughput, it is recommended to use AKS cluster in production.
   - Add a task to test the ACI web service using `AciWebserviceTest.py` in `service/code/` folder. This allows you to run the web service on new data (or test data) to forecast demand for new items. 
