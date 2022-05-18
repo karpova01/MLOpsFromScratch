@@ -24,8 +24,8 @@ We can setup Continuous Deployment (CID) trigger for every `Release` pipeline. T
   - Add a task to install the required version of Python `Python 3.6`.
   - Add a task to setup environment by using `install_environment.sh` file in `environment_setup/` folder. This will install all the python modules required to deploy the forecasting model.
   - **Important:** Add the path to the artifact in the Advanced -> Working Directory section.
-  - Add a task to deploy the scoring image on ACI using `deployOnAci`.py in `service/code/` folder. A “healthy” ACI deployment will be created under Azure ML Endpoints. It contains a REST-based Scoring URI/Endpoint that you can call using Postman or Swagger. 
-     -**TIP:** Use the Azure CLI task to run the Python scripts since they need to interact with the Azure Machine Learning resource.
+  - Add a task to deploy the scoring image on ACI using `deployOnAci.py` in `service/code/` folder. A “healthy” ACI deployment will be created under Azure ML Endpoints. It contains a REST-based Scoring URI/Endpoint that you can call using Postman or Swagger. 
+     -**TIP:** Use the Azure CLI task to run the Python scripts since they need to interact with the Azure Machine Learning resource(for this task and beyond, where you will need to run the Python script). Azure CLI task for Azure ML Workspace connection with  `python service/code/deployOnAci.py` in the Inline Script. Script type: ` Shell `
     - **NOTE:** ACI is recommended to use testing or pre-production stages. Since bigger inferencing compute is needed in production for low latency and high throughput, it is recommended to use AKS cluster in production.
   - Add a task to test the ACI web service using `AciWebserviceTest.py` in `service/code/` folder. This allows you to run the web service on new data (or test data) to forecast demand for new items. 
     - **NOTE:** If the deployment fails or the web service is "unhealthy", check logs in Azure DevOps or Azure ML Studio for issues and additional information.
