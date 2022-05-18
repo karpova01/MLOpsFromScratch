@@ -16,11 +16,11 @@ We can setup Continuous Deployment (CID) trigger for every `Release` pipeline. T
 ## Description
 
 - Create a `Release` pipeline.
-  - **TIP:** use the classic editor.
+- Start with an empty job.
 - Add `Build Artifact` that you created in the previous challenge (your built pipeline).
   - Set Agent Pool to `Azure Pipelines`.
   - Set Agent Specification to `ubuntu-18.04`.
-- Add `Release` pipeline tasks:
+- Add `Release` pipeline tasks (add task to Agent job):
   - Add a task to install the required version of Python `Python 3.6`.
   - Add a task to setup environment by using `install_environment.sh` file in `environment_setup/` folder. This will install all the python modules required to deploy the forecasting model.
   - **Important:** Add the path to the artifact in the Advanced -> Working Directory section.
