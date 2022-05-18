@@ -18,6 +18,18 @@ Time series is a series of data points collected or indexed in time order at reg
 - Import the repository into an Azure DevOps project
   - **HINT:** Use the `repos` section on the DevOps portal
 
+## Description of notebooks
+
+- `Workspa to evaluate the modelce.py` to setup connection with your Azure ML service workspace.
+- `AcquireData.py` to get daily transactions data from AdventureWorks.
+(Load the data, form a DataFrame from them with the following columns:'TransactionID', 'ProductID', 'ReferenceOrderID', 'ReferenceOrderLineID', 'TransactionDate', 'TransactionType', 'Quantity', 'ActualCost', 'ModifiedDate'.Create a dataset in Azure ML from the uploaded data.
+- `TrainOnLocal.py` to train the model.An experiment is created in the Azure Machine Learning workspace. The model is trained using the transaction_arima.py file. This file adds data from the dataset and imports the ARIMA model from the statsmodels library.
+- `EvaluateModel.py` to evaluate the model.Compare different versions of models. Comparison criterion: [R2](http://www.machinelearning.ru/wiki/index.php?title=%D0%9A%D0%BE%D1%8D%D1%84%D1%84%D0%B8%D1%86%D0%B8%D0%B5%D0%BD%D1%82_%D0%B4%D0%B5%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D0%B0%D1%86%D0%B8%D0%B8)
+- `RegisterModel.py` to register the model with Model registry.
+- `CreateScoringImage.py` for scoring/forecasting using the trained model.
+- `deployOnAci.py` to deploy the scoring image on ACI.
+- `WebserviceTest.py` to the ACI deployment/endpoint. (Gets the hosted web server and writes the model there with all the functions.)
+
 ## Success Criteria
 
 - Understand the contents of the python files under `service/code/`.
