@@ -20,7 +20,7 @@ Time series is a series of data points collected or indexed in time order at reg
 
 ## Description of notebooks
 
-- `Workspa to evaluate the modelce.py` to setup connection with your Azure ML service workspace.
+- `WorkSpace.py` to setup connection with your Azure ML service workspace.
 - `AcquireData.py` to get daily transactions data from AdventureWorks.
 (Load the data, form a DataFrame from them with the following columns:'TransactionID', 'ProductID', 'ReferenceOrderID', 'ReferenceOrderLineID', 'TransactionDate', 'TransactionType', 'Quantity', 'ActualCost', 'ModifiedDate'.Create a dataset in Azure ML from the uploaded data.
 - `TrainOnLocal.py` to train the model.An experiment is created in the Azure Machine Learning workspace. The model is trained using the transaction_arima.py file. This file adds data from the dataset and imports the ARIMA model from the statsmodels library.
