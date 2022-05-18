@@ -18,10 +18,10 @@ We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The
 - Create a `Build` pipeline.
   - **TIP:** use the classic editor.
   - Select the repo that was imported in the previous challenge.
+  - Start with an empty job and add task to Agent job.
   - Set Agent Pool to `Azure Pipelines`.
   - Set Agent Specification to `ubuntu-18.04`.
 - Add `Build` pipeline tasks
-- **Hint:** start with an empty job and add task to Agent job.
   - Add a task to install the required version of Python `Python 3.6`.
   - Add a task to setup environment by using `install_environment.sh` file in `environment_setup/` folder. This will install all the python modules required for the project.
   - **TIP:** Use Bash task to run a Bash script on macOS, Linux, or Windows.
