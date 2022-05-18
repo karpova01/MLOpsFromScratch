@@ -10,8 +10,6 @@ There are several ways to create a `Build` pipeline. The two most common and pop
 - Using a YAML file that represents the entire pipeline.
 - Using the classic GUI pipeline and adding tasks sequentially.
 
-Use whichever approach your team is most comfortable with.
-
 We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The CI pipeline gets triggered every time code is checked in. It publishes an updated Azure Machine Learning pipeline after building the code.
 
 ## Description
