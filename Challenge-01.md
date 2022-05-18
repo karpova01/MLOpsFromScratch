@@ -11,7 +11,7 @@ Time series is a series of data points collected or indexed in time order at reg
 ## Description
 
 - Create and setup a new project in Azure DevOps
-  - Copy yourself a of the [repository](https://github.com/karpova01/DemandForecasting) and import it into the project.
+  - Copy yourself a of the [repository](https://github.com/karpova01/DemandForecasting).
   - [Create new service connections](https://docs.microsoft.com/en-us/azure/devops/pipelines/library/service-endpoints?view=azure-devops&tabs=yaml) in Project Settings for your Azure ML service and Azure Subscription using Azure Resource Manager service principal. This will enable you to connect to external and remote services to execute tasks in a pipeline.
 - Configure your Azure ML Workspace for the project.
   - **HINT:** Add workspace details in `config.json` in a file in the repository you copied. 
