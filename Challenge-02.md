@@ -35,7 +35,7 @@ We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The
   - Now you are at a point of creating an artifact for your `Release` pipeline. An artifact is the deployable component of your model or application. `Build Artifact` is one of the many artifact types. The following two tasks are required to create `Build artifact` in your `Build` pipeline. 
     - Use Copy Files task to copy files from `$(Build.SourcesDirectory)` to `$(Build.ArtifactStagingDirectory)`.
     - Use Publish Artifact task with `$(Build.ArtifactStagingDirectory)` as path to publish. 
-- Run the `Build` pipeline.
+- Save and run the `Build` pipeline.
 - Review `Build` Outputs - confirm that the model and Azure Container Image have been registered in the [Azure ML workspace](https://ml.azure.com/) in respective registries.
 
 ## Success criteria
