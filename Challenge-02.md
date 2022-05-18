@@ -21,11 +21,12 @@ We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The
   - Set Agent Pool to `Azure Pipelines`.
   - Set Agent Specification to `ubuntu-18.04`.
 - Add `Build` pipeline tasks
+- **Hint:** start with an empty job and add task to Agent job.
   - Add a task to install the required version of Python `Python 3.6`.
   - Add a task to setup environment by using `install_environment.sh` file in `environment_setup/` folder. This will install all the python modules required for the project.
   - **TIP:** Use Bash task to run a Bash script on macOS, Linux, or Windows.
   - Add a task to get Azure ML Workspace connection using `Workspace.py` in `service/code/` folder. This will establish connection to Azure ML workspace by using your workspace details in `configuration/config.json` file.
-  - **TIP:** Use the Azure CLI task to run the Python scripts since they need to interact with the Azure Machine Learning resource (for this task and beyond, where you will need to run the python file).         
+  - **TIP:** Use the Azure CLI task to run the Python scripts since they need to interact with the Azure Machine Learning resource (for this task and beyond, where you will need to run the Python script).         
   - Add a task to acquire time series transactions data using `AcquireData.py` in `service/code/` folder. This will download and extract the data required to train a forecasting model in the next steps.
   - Add a task to train ARIMA forecasting model using `TrainOnLocal.py` in `service/code/` folder. This will build a model to forecast demand of items from AdventureWorks database.
   - Add a task to evaluate the model performance using `EvaluateModel.py` in `service/code/` folder. This will evaluate how well the model is doing by using evaluation metrics such as R-squared and RMSE(Root mean squared error).
