@@ -10,7 +10,6 @@ There are several ways to create a `Release` pipeline. The two most common and p
 -   Using a YAML file that represents the entire pipeline.
 -   Using a classic GUI pipeline & adding tasks sequentially.
 
-Use whichever approach your team is most comfortable with.
 
 We can setup Continuous Deployment (CID) trigger for every `Release` pipeline. The pipeline shows how to operationalize the scoring image and promote it safely across different environments.
 
@@ -24,6 +23,7 @@ We can setup Continuous Deployment (CID) trigger for every `Release` pipeline. T
 - Add `Release` pipeline tasks:
   - Add a task to install the required version of Python `Python 3.6`.
   - Add a task to setup environment by using `install_environment.sh` file in `environment_setup/` folder. This will install all the python modules required to deploy the forecasting model.
+  - **Important:** Add the path to the artifact in the Advanced -> Working Directory section.
   - Add a task to deploy the scoring image on ACI using `deployOnAci`.py in `service/code/` folder. A “healthy” ACI deployment will be created under Azure ML Endpoints. It contains a REST-based Scoring URI/Endpoint that you can call using Postman or Swagger. 
      -**TIP:** Use the Azure CLI task to run the Python scripts since they need to interact with the Azure Machine Learning resource.
     - **NOTE:** ACI is recommended to use testing or pre-production stages. Since bigger inferencing compute is needed in production for low latency and high throughput, it is recommended to use AKS cluster in production.
@@ -37,16 +37,6 @@ We can setup Continuous Deployment (CID) trigger for every `Release` pipeline. T
 
 ## Tips
 
-- If using YAML pipelines, make sure you use the same name that you used for the `Build` pipeline in the `Release` pipeline `pipeline.source`.
-- Finding the path to where Azure DevOps will copy your build artifact is often the hardest part.
-  - You can use the following command in a `Bash` task to print all environment variables (which is how predefined variables are passed to your pipeline).
-    ```shell
-    env | sort
-    ```
-  - You can use the following command in a `Bash` task to print a `tree` of the filesystem of your build agent.
-    ```shell
-    find $(Pipeline.Workspace) -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"
-    ```
 - Use the [predefined variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/release/variables?view=azure-devops&tabs=batch) in Azure DevOps to make your tasks simpler & more robust.
 
 ## Learning resources
