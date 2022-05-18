@@ -23,9 +23,9 @@ We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The
 - Add `Build` pipeline tasks
   - Add a task to install the required version of Python `Python 3.6`.
   - Add a task to setup environment by using `install_environment.sh` file in `environment_setup/` folder. This will install all the python modules required for the project.
-    -**TIP:** Use Bash task to run a Bash script on macOS, Linux, or Windows.
+   -**TIP:** Use Bash task to run a Bash script on macOS, Linux, or Windows.
   - Add a task to get Azure ML Workspace connection using `Workspace.py` in `service/code/` folder. This will establish connection to Azure ML workspace by using your workspace details in `configuration/config.json` file.
-    -**TIP:** Use the Azure CLI task to run the Python scripts since they need to interact with the Azure Machine Learning resource.         
+   -**TIP:** Use the Azure CLI task to run the Python scripts since they need to interact with the Azure Machine Learning resource (for this task and beyond, where you will need to run the python file).         
   - Add a task to acquire time series transactions data using `AcquireData.py` in `service/code/` folder. This will download and extract the data required to train a forecasting model in the next steps.
   - Add a task to train ARIMA forecasting model using `TrainOnLocal.py` in `service/code/` folder. This will build a model to forecast demand of items from AdventureWorks database.
   - Add a task to evaluate the model performance using `EvaluateModel.py` in `service/code/` folder. This will evaluate how well the model is doing by using evaluation metrics such as R-squared and RMSE(Root mean squared error).
@@ -44,15 +44,6 @@ We can setup Continuous Integration (CI) trigger for every `Build` pipeline. The
 
 ## Tips
 
-- Finding the path to where Azure DevOps will copy your build artifact is often the hardest part.
-  - You can use the following command in a `Bash` task to print all environment variables (which is how predefined variables are passed to your pipeline).
-    ```shell
-    env | sort
-    ```
-  - You can use the following command in a `Bash` task to print a `tree` of the filesystem of your build agent.
-    ```shell
-    find $(Pipeline.Workspace) -print | sed -e "s;[^/]*/;|____;g;s;____|; |;g"
-    ```
 - Use the [predefined variables](https://docs.microsoft.com/en-us/azure/devops/pipelines/build/variables?view=azure-devops&tabs=classic) in Azure DevOps to make your tasks simpler & more robust.
 
 ## Learning resources
