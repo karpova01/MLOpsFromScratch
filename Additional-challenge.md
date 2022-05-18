@@ -1,4 +1,4 @@
-# Challenge 5 – What's next ? Retraining and Model Evaluation
+# What's next ? Retraining and Model Evaluation
 
 [< Previous Challenge](./Challenge-04.md) - **[Home](../README.md)**
 
